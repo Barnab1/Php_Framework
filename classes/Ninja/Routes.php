@@ -13,5 +13,5 @@ namespace Ninja;
 interface Routes
 {
     public function getRoutes();
-    public function getClasses() : array;
+
 }

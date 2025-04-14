@@ -4,8 +4,6 @@ namespace Project;
 
 class ProjectRoutes implements \Ninja\Routes
 {
-
-
     /**
      * 
      * That public construct function instantiate the class 
@@ -14,19 +12,10 @@ class ProjectRoutes implements \Ninja\Routes
      * 
      **/
 
-     private $usersTable;
-     private $authentication;
-
-
-     
     public function __construct()
     {
-        include __DIR__. '/../../includes/DatabaseConnection.php';
-        
-      
+        include __DIR__. '/../../includes/DatabaseConnection.php'; 
     }
-
-
 
     /**
      * getRoutes( )
@@ -34,30 +23,15 @@ class ProjectRoutes implements \Ninja\Routes
      * Return the route which will intantiate
      *  the controller and the action required
      * ***************************************
-     * @return routes array
      */
     public function getRoutes()
     {
-     
-        $exposesController = new \Project\Controller\ExposesController();
-        $loginController = new \Project\Controller\LoginController($this->authentication);
-        $registerController = new \Project\Controller\RegisterController($this->usersTable);
-
-      $routes = [
-                    'exposes'=>
-                    [
-                        'GET'=>
-                        [
-                            'controller'=>$exposesController,
-                            'action'=>'exposes'
-                        ]
-                    ] ,
-
-                   
+      $routes = [  
                 ]  ;
-        return $routes;
+    
+                return $routes;
         
     }
 
-   
+  
 }
