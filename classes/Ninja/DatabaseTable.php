@@ -14,7 +14,7 @@ class DatabaseTable
     private $className;
     private $constructArgs;
 
-    public function __construct(\PDO $pdo, string $table, string $primaryKey,string $className='\stdClass', array $constructArgs=[])
+    public function __construct(PDO $pdo, string $table, string $primaryKey,string $className='\stdClass', array $constructArgs=[])
     {
       $this->pdo=$pdo;
       $this->table=$table;
@@ -120,7 +120,7 @@ public function insert($record)
     $record=$this->processDates($record);
         //var_dump($sql);
     $this->query($sql,$record);
-    $this->pdo->lastInsertId();
+    return $this->pdo->lastInsertId();
 
 }
 
