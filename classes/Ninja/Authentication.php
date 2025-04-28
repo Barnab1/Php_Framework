@@ -36,7 +36,9 @@ class Authentication
      */
     public function login($username,$password)
     {
-        $user = $this->usersTable->find($this->usernameColumn,strtolower($username));
+        $username = strtolower($username);
+        
+        $user = $this->usersTable->find($this->usernameColumn, $username);
         $passwordFromDatabase = $user[0]->{$this->passwordColumn};
         
        if(!empty($user) && password_verify($password,$passwordFromDatabase))

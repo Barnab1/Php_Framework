@@ -26,9 +26,9 @@ class DatabaseTable
 
 private function query($sql,$parameters=[])
 {
-$query=$this->pdo->prepare($sql);
-$query->execute($parameters);
-return $query;
+    $query=$this->pdo->prepare($sql);
+    $query->execute($parameters);
+    return $query;
 }
 
 
@@ -212,7 +212,7 @@ public function deleteWhere($column,$value)
     $sql='DELETE FROM `'. $this->table. '` WHERE `'.$column. '` =:value';
     $parameters=['value'=>$value];
     $this->query($sql,$parameters);
-    //$this->pdo->clearstatcache
+    
 }
 
 
