@@ -1,8 +1,8 @@
 # PURPOSE
 
-This repository contain the code that I've been trained with during my study of Sitepoint book: "Novice To ninja in PHP".
+This repository contain the code that I've been trained with during my study of PHP.
 
-I'm grateful toward Sitepoint community especially Tom Butler and Kevin Yank for their book
+The purpose behind is to create a framework for small websites. 
 
 # HOW TO USE
 
